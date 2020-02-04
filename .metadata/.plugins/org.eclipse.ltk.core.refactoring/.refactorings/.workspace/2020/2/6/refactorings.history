@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;entry/WebContent/css/headerForPress.css&apos;" deleteContents="false" description="Delete resource &apos;entry/WebContent/css/headerForPress.css&apos;" element1="/entry/WebContent/css/headerForPress.css" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1580823193405"/>
+</session>

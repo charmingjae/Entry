@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+.login-dark {
+  height:1000px;
+  background:black;
+  background-size:cover;
+  position:relative;
+  background-color: black;
+}
+
+.login-dark form {
+  max-width:320px;
+  width:100%;
+  background-color:white;
+  padding:40px;
+  border-radius:4px;
+  transform:translate(-50%, -50%);
+  position:fixed;
+  top:50%;
+  left:50%;
+  color:black;
+  box-shadow:3px 3px 4px rgba(0,0,0,0.2);
+}
+
+.login-dark .illustration {
+  text-align:center;
+  padding:15px 0 20px;
+  font-size:100px;
+  color:black;
+}
+
+.login-dark form .form-control {
+  background:none;
+  border:none;
+  border-bottom:1px solid #434a52;
+  border-radius:0;
+  box-shadow:none;
+  outline:none;
+  color:inherit;
+}
+
+.login-dark form .btn-primary {
+  background:black;
+  border:none;
+  border-radius:4px;
+  padding:11px;
+  box-shadow:none;
+  margin-top:26px;
+  text-shadow:none;
+  outline:none;
+}
+
+.login-dark form .btn-primary:hover, .login-dark form .btn-primary:active {
+  background:#214a80;
+  outline:none;
+}
+
+.login-dark form .forgot {
+  display:block;
+  text-align:center;
+  font-size:12px;
+  color:#6F7985;
+  opacity:0.9;
+  text-decoration:none;
+}
+
+.contact{
+  display:block;
+  text-align:center;
+  font-size:15px;
+  color:black;
+  opacity:0.9;
+  text-decoration:none;
+}
+
+.email{
+  display:block;
+  text-align:center;
+  font-size:15px;
+  color:black;
+  opacity:0.9;
+  text-decoration:none;
+}
+
+.login-dark form .forgot:hover, .login-dark form .forgot:active {
+  opacity:1;
+  text-decoration:none;
+}
+
+.login-dark form .btn-primary:active {
+  transform:translateY(1px);
+}
+
+ul{
+	list-style:none;
+	text-align:center;
+}
+
+li{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align:center;
+}
+
+ion-icon{
+	font-size:50px;
+}
+
+
+
+
+/* Button css */
+
+/* for button css */
+button{
+    position: absolute;
+    top:85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 200px;
+}
+
+button {
+    background: none;
+    color: #ccc;
+    width: 190px;
+    height:50px;
+    border:1px solid #ccc;
+    font-size:18px;
+    border-radius : 4px;
+    transition: .6s;
+    overflow: hidden;
+}
+
+button:focus{
+    outline : none;
+}
+
+button:befor{
+    content: '';
+    display:block;
+    position :absolute;
+    background : rgba(255,255,255, .5);
+    width: 60px;
+    height : 100%;
+    left:0;
+    top: 0;
+    opacity : .5s;
+    filter : blur(30px);
+    transform:translateX(-130px) skewX(-15deg);
+}
+
+button:after{
+    content: '';
+    display: block;
+    position: absolute;
+    background : rgba(255,255,255, .2);
+    width : 30px;
+    height: 100%;
+    left: 30px;
+    top : 0;
+    opacity:0;
+    filter : blur(30px);
+    transform: translate(-100px) scaleX(-15deg);
+}
+
+button:hover{
+	border:#8cdbbb;
+	outline:#8cdbbb;
+    color:black;
+    background: #8cdbbb;
+    cursor : pointer;
+}
+
+button:hover:before {
+    transform:translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: .7s;
+}
+
+button:hover:after{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: .7s;
+}
