@@ -59,6 +59,10 @@
 	                            <%
 	                            		}
 	                            		else{
+	                            			if(getSession.equals("admin")){
+                   				%>			<li><a href="press.jsp">!!! PRESS !!!</a></li>
+   	                            <%
+	                            			}
 	                            %>			<li><a href="logout.jsp">Log-Out</a></li>
 	                            <%
 	                            		}
