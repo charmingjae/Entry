@@ -1,6 +1,6 @@
 # Entry Project
 
-###### 신발 추첨 Web for Blockchain
+#### 신발 추첨 Web for Blockchain
 
 > 0205
 - UI 설계
