@@ -7,7 +7,7 @@ import java.util.Map;
 import com.google.gson.GsonBuilder;
 import simpleChain.Block;
 
-public class PublicChain {
+public class IdChain {
 	public static List<Block> blockchain = new ArrayList<Block>();
 
 	
@@ -15,9 +15,11 @@ public class PublicChain {
 
 	public static int difficulty = 3;
 	
-	public String product;
-	public String nation;
-	public String amount;
+	/* id를 받아오는 변수 */
+	public String id;
+	
+	/* email을 받아오는 변수 */
+	public String email;
 	
 	public static List<Object> transactions = new ArrayList<>(); // 갖고갈 array
 	
@@ -62,14 +64,14 @@ public class PublicChain {
 				
 				System.out.println("\n===========================================================================================");
 				
-				System.out.println("\n THE BLOCK CHAIN : ");
+				System.out.println("\n THE iD CHAIN : ");
 				System.out.println(blockchainJson);
 				
 				System.out.println("\n===========================================================================================");
 	}
 	
 	
-	public List<Object> addObject(String product, String nation, String amount) {
+	public List<Object> addObject(String email, String id) {
 		
 		mapTrans = new HashMap<>(); // 진짜 대박 . https://its21c.net/248 을 참고하여 작성. 이 게시글 100번도 넘게 본 것 같은데 이제 이해함.
 		
@@ -81,9 +83,8 @@ public class PublicChain {
 		System.out.println("\n");
 		
 		
-		mapTrans.put("product", product);
-		mapTrans.put("nation", nation);
-		mapTrans.put("amount", amount);
+		mapTrans.put("Email", email);
+		mapTrans.put("iD", id);
 
 		transactions.add(mapTrans);
 			
@@ -94,6 +95,8 @@ public class PublicChain {
 			System.out.println(transactions.get(i));
 		}
 		
+		
+//		test();
 		return transactions;
 		
 	}

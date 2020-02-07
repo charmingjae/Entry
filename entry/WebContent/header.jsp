@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="simpleChain.IdChain" %>
+<%@ page import="simpleChain.IdChain.*" %>
+<%@ page import="simpleChain.Block" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,6 +64,7 @@
 	                            		else{
 	                            			if(getSession.equals("admin")){
                    				%>			<li><a href="press.jsp">!!! PRESS !!!</a></li>
+                   							<li><a href="generateBlock.jsp">BLOCK</a></li>
    	                            <%
 	                            			}
 	                            %>			<li><a href="logout.jsp">Log-Out</a></li>
@@ -79,6 +83,7 @@
       </div>
 
       <script type="text/javascript">
+      
 /* 
       // Menu-toggle button
 
