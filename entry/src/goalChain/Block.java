@@ -19,16 +19,16 @@ public class Block {
 	public int[] chain = null;
 	private long timeStamp; //as number of milliseconds since 1/1/1970.
 	private int nonce;
-	public List<Object> idList;
+	public List<Object> GOAL;
 //	public Map<String, String> mapTrans = new HashMap<>();
 	
 	
 //	Block Constructor.
 	public Block(int index, String data, String previousHash, List<Object> transactions, Map<String, String> mapTrans) {
-		idList = new ArrayList<Object>();
+		GOAL = new ArrayList<Object>();
 		this.index = index + 1;
 		this.data = data;
-		this.idList = transactions;
+		this.GOAL = transactions;
 //		this.mapTrans = mapTrans;
 		this.previousHash = previousHash;
 		this.timeStamp = new Date().getTime();

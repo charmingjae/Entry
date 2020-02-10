@@ -40,7 +40,7 @@
 		conn = DriverManager.getConnection(jdbcDriver,dbUser,dbPass);
 		
 		
-		String sql =  "INSERT INTO GOAL(id,email) SELECT id, email FROM ENTRY ORDER BY RAND() LIMIT 2";
+		String sql =  "INSERT INTO GOAL(id,email) SELECT id, email FROM ENTRY ORDER BY RAND() LIMIT 6";
 		
 		// 이미 등록했는지 중복체크
 		String sqlchkId = "DELETE FROM GOAL";
@@ -73,13 +73,14 @@
 		GoalChain chain = new GoalChain();
 		
 		/* 	블록체인에서 사용할 체인 복사*/
-		chain.id = id;
+		GoalChain.transactions.addAll(goalChain);
+		chain.test();
 		
-		System.out.println("CHAIN id = " + chain.id);
+/* 		System.out.println("CHAIN id = " + chain.id);
 		System.out.println("CHAIN email = " + chain.email);
 		
 		
-		chain.addObject(chain.email, chain.id);
+		chain.addObject(chain.email, chain.id); */
 		
 		
 			

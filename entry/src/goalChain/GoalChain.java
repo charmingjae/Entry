@@ -43,9 +43,8 @@ public class GoalChain {
 				while(true) {
 					if(blockchain.size() == 0) {
 						
-						blockchain.add(new Block(blockchain.size(), Integer.toString(blockchain.size()+1)+"번째 블록", "0", transactions, mapTrans));
+						blockchain.add(new Block(blockchain.size(), " 테스트용 제네시스 블록 ", "0", transactions, mapTrans));
 						transactions = new ArrayList<>();
-						System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!Blockchain = " + blockchain.get(0));
 						System.out.println((blockchain.size())+"번째 블록 마이닝 중 ,,");
 						blockchain.get(blockchain.size()-1).mineBlock(difficulty);
 						index++;
@@ -54,7 +53,7 @@ public class GoalChain {
 					else {
 						blockchain.add(new Block(blockchain.size(), Integer.toString(blockchain.size()+1)+"번째 블록", blockchain.get(blockchain.size()-1).hash, transactions, mapTrans));
 						transactions = new ArrayList<>();
-						System.out.println((blockchain.size())+"번째 블록 마이닝 중 ,,");
+						System.out.println((blockchain.size()-1)+"번째 블록 마이닝 중 ,,");
 						blockchain.get(blockchain.size()-1).mineBlock(difficulty);
 						index++;
 						break;
@@ -67,7 +66,7 @@ public class GoalChain {
 				
 				System.out.println("\n===========================================================================================");
 				
-				System.out.println("\n THE iD CHAIN : ");
+				System.out.println("\n Force goes to ... : ");
 				System.out.println(blockchainJson);
 				
 				System.out.println("\n===========================================================================================");
@@ -76,7 +75,19 @@ public class GoalChain {
 	
 	public void test() { 
 		//add our blocks to the blockchain ArrayList:
-		System.out.println("\n===========================================================================================\n");
+		System.out.println("\n===========================================================================================\n"
+							+"===========================================================================================\n"
+							+"===========================================================================================\n");
+		System.out.println("" + 
+				"░██████╗░░█████╗░░█████╗░██╗░░░░░  ░█████╗░██╗░░██╗░█████╗░██╗███╗░░██╗\n" + 
+				"██╔════╝░██╔══██╗██╔══██╗██║░░░░░  ██╔══██╗██║░░██║██╔══██╗██║████╗░██║\n" + 
+				"██║░░██╗░██║░░██║███████║██║░░░░░  ██║░░╚═╝███████║███████║██║██╔██╗██║\n" + 
+				"██║░░╚██╗██║░░██║██╔══██║██║░░░░░  ██║░░██╗██╔══██║██╔══██║██║██║╚████║\n" + 
+				"╚██████╔╝╚█████╔╝██║░░██║███████╗  ╚█████╔╝██║░░██║██║░░██║██║██║░╚███║\n" + 
+				"░╚═════╝░░╚════╝░╚═╝░░╚═╝╚══════╝  ░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝╚═╝░░╚══╝");
+		System.out.println("\n===========================================================================================\n"
+							+"===========================================================================================\n"
+							+"===========================================================================================\n");
 		System.out.println("블록체인 사이즈 : " + blockchain.size());
 
 		while(true) {
@@ -85,10 +96,8 @@ public class GoalChain {
 				transactions = deepCopy(copytran);
 				
 				
-				blockchain.add(new Block(blockchain.size(), Integer.toString(blockchain.size()+1)+"번째 블록", "0", transactions, mapTrans));
+				blockchain.add(new Block(blockchain.size(), "테스트용 제네시스 블록", "0", transactions, mapTrans));
 				transactions = new ArrayList<>();
-				System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!Blockchain = " + blockchain.get(0));
-				System.out.println((blockchain.size())+"번째 블록 마이닝 중 ,,");
 				blockchain.get(blockchain.size()-1).mineBlock(difficulty);
 				index++;
 				break;
@@ -98,7 +107,7 @@ public class GoalChain {
 				
 				transactions = deepCopy(copytran);
 				
-				blockchain.add(new Block(blockchain.size(), Integer.toString(blockchain.size()+1)+"번째 블록", blockchain.get(blockchain.size()-1).hash, transactions, mapTrans));
+				blockchain.add(new Block(blockchain.size(), Integer.toString(blockchain.size())+"번째 블록", blockchain.get(blockchain.size()-1).hash, transactions, mapTrans));
 				transactions = new ArrayList<>();
 				System.out.println((blockchain.size())+"번째 블록 마이닝 중 ,,");
 				blockchain.get(blockchain.size()-1).mineBlock(difficulty);
@@ -113,7 +122,7 @@ public class GoalChain {
 		
 		System.out.println("\n===========================================================================================");
 		
-		System.out.println("\n THE iD CHAIN : ");
+		System.out.println("\n And The Force Goes To... : ");
 		System.out.println(blockchainJson);
 		
 		System.out.println("\n===========================================================================================");
