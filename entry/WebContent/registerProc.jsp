@@ -66,11 +66,11 @@
 			int result = 0; // insert문 flag
 			
 			if(rs.next()){
-		// 테이블에 사원정보가 등록되어 있는 경우.
-		userCheck = 1; // id 중복
+				// 테이블에 사원정보가 등록되어 있는 경우.
+				userCheck = 1; // id 중복
 			}
-			else if(rs2.next()){
-		userCheck = 2; // email 중복
+				else if(rs2.next()){
+				userCheck = 2; // email 중복
 			}
 			else{
 				// 테이블에 사원 정보가 등록되어 있지 않은 경우.
