@@ -101,7 +101,7 @@ public class IdChain {
 		System.out.println("\n===========================================================================================\n"
 							+"===========================================================================================\n"
 							+"===========================================================================================\n");
-		System.out.println("블록체인 사이즈 : " + blockchain.size());
+		System.out.println("블록체인 사이즈 : " + (blockchain.size()+1));
 
 		while(true) {
 			if(blockchain.size() == 0) {
@@ -111,7 +111,6 @@ public class IdChain {
 				
 				blockchain.add(new Block(blockchain.size(), Integer.toString(blockchain.size()+1)+"번째 블록", "0", transactions, mapTrans));
 				transactions = new ArrayList<>();
-				System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!Blockchain = " + blockchain.get(0));
 				System.out.println((blockchain.size())+"번째 블록 마이닝 중 ,,");
 				blockchain.get(blockchain.size()-1).mineBlock(difficulty);
 				index++;

@@ -42,7 +42,7 @@
 
             							}
             							else{
-   								%>			<li><a href="#">Welcome <%=getSession %></a></li>
+   								%>			<li><a href="chkGoal.jsp">Welcome <%=getSession %></a></li>
    	                            <%
             							}
             						}catch(Exception e){
