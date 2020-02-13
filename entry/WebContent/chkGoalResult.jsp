@@ -8,11 +8,15 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%
+	
+	String userId = (String)request.getAttribute("userId");
+	%>
 	<c:choose>
 		<c:when test="${userCheck == 0 }">
 			<script type="text/javascript">
 				alert("축하합니다!");
-				location.href ="amigoalin.jsp";
+				location.href = "amigoalin.jsp?userId=<%=userId%>";
 			</script>
 		</c:when>
 		<c:when test="${userCheck > 0 }">
