@@ -42,7 +42,8 @@
 
             							}
             							else{
-   								%>			<li><a onclick="myFunction()">Welcome <%=getSession %></a></li>
+   								%>			<%-- <li><a onclick="myFunction()">Welcome <%=getSession %></a></li> --%>
+   											<li><a href="menu.html">Welcome <%=getSession %></a></li>
    	                            <%
             							}
             						}catch(Exception e){

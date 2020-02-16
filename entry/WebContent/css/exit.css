@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+/* Thanks to gavin19 for clean up and resize help */
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+body {
+  background-color: Teal;
+  overflow: auto;
+}
+
+#canvas {
+  left: 25%;
+  margin-top: 15%;
+  position: absolute;
+}
+[class*="button"] {
+  line-height: 90px;
+  font-size: 50px;
+  font-family: Raleway;
+  margin-top: 55px;
+  background-color: #ff0066;
+  border-radius: 100px;
+  padding: 0;
+  top : 40%;
+  left: 50%;
+  margin-left: -60px;
+  border-bottom: 30px solid #990033;
+  position: absolute;
+  width: 120px;
+  height: 85px;
+  transition: 0.5s;
+  text-align: center;
+}
+.button:active {
+  margin-top: 85px;
+  border-bottom: 0px solid black;
+  transition: 0.25s;
+  /* animation: chaos 1s; */
+}
+a{
+	text-decoration: none;	
+}
+a:hover{
+	text-decoration: none;
+}
+
+.button a {
+  text-decoration: none;
+  color: white;
+}
+.button1 {
+  background-color: Gainsboro;
+  width: 150px;
+  height: 100px;
+  border-bottom: 20px solid Grey;
+  z-index: -1;
+  left: 50%;
+  margin-left: -75px;
+  margin-top: 75px;
+  animation: null 1s;
+}
