@@ -1,6 +1,5 @@
 INDEX VERSION 1.4+/Users/chaminjae/Desktop/entry/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
 2856025133.index
-999415847.index
 4024536123.index
 265270264.index
 2548742935.index
