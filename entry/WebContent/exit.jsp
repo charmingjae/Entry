@@ -22,7 +22,7 @@
     </div>
 </body>
 <script type="text/javascript">
-function myFunction(){
+/* function myFunction(){
 		if(confirm("회원탈퇴를 진행하시겠습니까?") == true){
 			location.href="exitProc.jsp";
 			return true;
@@ -31,7 +31,19 @@ function myFunction(){
 			alert("취소되었습니다.");
 			return false;
 		}
+} */
+
+function myFunction(){
+	var name = prompt("회원탈퇴를 원하시면 '차민재 짱'을 입력하세요.","");
+	if(){
+		location.href="exitProc.jsp";
+		return true;
 	}
+	else{
+		alert("취소되었습니다.");
+		return false;
+	}
+}
 </script>
 
 </html>
