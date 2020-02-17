@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="simpleChain.IdChain" %>
+<%@ page import="simpleChain.IdChain.*" %>
+<%@ page import="simpleChain.Block" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +26,7 @@
 
                         <div class="logo">
                               <!-- LOGO -->
-                              <a class="center__text glitch is-glitching" data-text="ENTRY" href="#"><span>ENTRY</span></a>
+                              <a class="center__text glitch is-glitching" data-text="ENTRY" href="event.jsp"><span>ENTRY</span></a>
                         </div>
                         
 
@@ -39,7 +42,8 @@
 
             							}
             							else{
-   								%>			<li><a href="#">Welcome <%=getSession %></a></li>
+   								%>			<%-- <li><a onclick="myFunction()">Welcome <%=getSession %></a></li> --%>
+   											<li><strong><a href="menu.html">Welcome <%=getSession %></a></strong></li>
    	                            <%
             							}
             						}catch(Exception e){
@@ -61,6 +65,7 @@
 	                            		else{
 	                            			if(getSession.equals("admin")){
                    				%>			<li><a href="press.jsp">!!! PRESS !!!</a></li>
+                   							<li><a href="generateBlock.jsp">BLOCK</a></li>
    	                            <%
 	                            			}
 	                            %>			<li><a href="logout.jsp">Log-Out</a></li>
@@ -79,6 +84,18 @@
       </div>
 
       <script type="text/javascript">
+      
+  	function myFunction(){
+  		if(confirm("당첨 결과를 확인하시겠습니까?") == true){
+  			location.href="chkGoal.jsp";
+  			return true;
+  		}
+  		else{
+  			alert("취소되었습니다.");
+  			return false;
+  		}
+  	}
+      
 /* 
       // Menu-toggle button
 

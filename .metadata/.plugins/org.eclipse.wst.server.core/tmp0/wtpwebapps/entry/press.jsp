@@ -23,7 +23,19 @@
             <ul>
                   <li><ion-icon name="flame"></ion-icon><a href="https://www.google.com/search?q=totoro&sxsrf=ACYBGNQkquHC8QRXSNrRdha-64GeR8OMRA:1580824644096&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj9-vPahrjnAhW5yYsBHWAFBp0Q_AUoAXoECBMQAw&biw=1680&bih=915" class="contact">みんな笑ってみな、<br/>おっかないのは逃げちゃうから</a></li>
             </ul>
-            <button type="button" onclick="">time's up</button>
+            <button type="button" onclick="goal()">time's up</button>
+            <script> 
+            	function goal(){
+            		if(confirm("추첨 하시겠습니까?") == true){
+            			location.href="goal.jsp";
+            			return true;
+            		}
+            		else{
+            			alert("취소되었습니다.");
+            			return false;
+            		}
+            	}
+            </script>
             
       </div>
         </form>
