@@ -11,6 +11,7 @@
 
 <%
 	String id = (String)session.getAttribute("id");
+	
 	int result = 0;
 	
 	

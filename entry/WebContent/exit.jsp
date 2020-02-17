@@ -33,16 +33,18 @@
 		}
 } */
 
+
+/* 회원탈퇴 시 문자열을 비교하여 탈퇴 여부 결정 */
 function myFunction(){
-	var name = prompt("회원탈퇴를 원하시면 '차민재 짱'을 입력하세요.","");
-	if(){
-		location.href="exitProc.jsp";
-		return true;
-	}
-	else{
-		alert("취소되었습니다.");
-		return false;
-	}
+		var name = prompt("회원탈퇴를 원하시면 '차민재 짱'을 입력하세요.","");
+		if(name == "차민재 짱"){
+			location.href="exitProc.jsp";
+			return true;
+		}
+		else{
+			alert("입력한 문자를 확인하세요.");
+			return false;
+		}
 }
 </script>
 
