@@ -12,13 +12,25 @@
       <div class="nav-wrapper">
             <nav>
                   <a href="mdfPassword.jsp" class="hover-this"><span>PASSWORD</span></a>
+                  <a href="javascript:myFunction()" class="hover-this"><span>GOAL?</span></a>
                   <a href="exit.jsp" class="hover-this"><span>회원탈퇴</span></a>
                   <!-- <a href="contact.html" class="hover-this"><span>Contact</span></a> -->
                   <div class="cursor"></div>
             </nav>
       </div>
 
-<script>
+<script type="text/javascript">
+
+function myFunction(){
+		if(confirm("당첨 결과를 확인하시겠습니까?") == true){
+			location.href="chkGoal.jsp";
+			return true;
+		}
+		else{
+			alert("취소되었습니다.");
+			return false;
+		}
+}
 
 (function () {
 
