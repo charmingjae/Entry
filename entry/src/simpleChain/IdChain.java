@@ -21,6 +21,9 @@ public class IdChain {
 	/* email을 받아오는 변수 */
 	public String email;
 	
+	/* data를 받아오는 변수 */
+	public static String data;
+	
 	public static List<Object> transactions = new ArrayList<>(); // 갖고갈 array
 	public static List<Object> copytran = new ArrayList<>(); // 갖고갈 array
 	
@@ -109,7 +112,7 @@ public class IdChain {
 				transactions = deepCopy(copytran);
 				
 				
-				blockchain.add(new Block(blockchain.size(), Integer.toString(blockchain.size()+1)+"번째 블록", "0", transactions, mapTrans));
+				blockchain.add(new Block(blockchain.size(), data, "0", transactions, mapTrans));
 				transactions = new ArrayList<>();
 				System.out.println((blockchain.size())+"번째 블록 마이닝 중 ,,");
 				blockchain.get(blockchain.size()-1).mineBlock(difficulty);
@@ -121,7 +124,7 @@ public class IdChain {
 				
 				transactions = deepCopy(copytran);
 				
-				blockchain.add(new Block(blockchain.size(), Integer.toString(blockchain.size()+1)+"번째 블록", blockchain.get(blockchain.size()-1).hash, transactions, mapTrans));
+				blockchain.add(new Block(blockchain.size(), data, blockchain.get(blockchain.size()-1).hash, transactions, mapTrans));
 				transactions = new ArrayList<>();
 				System.out.println((blockchain.size())+"번째 블록 마이닝 중 ,,");
 				blockchain.get(blockchain.size()-1).mineBlock(difficulty);

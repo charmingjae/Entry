@@ -4,6 +4,7 @@
 <%@ page import="simpleChain.IdChain" %>
 <%@ page import="simpleChain.IdChain.*" %>
 <%@ page import="simpleChain.Block" %>
+<%@ page import="simpleChain.Block.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,12 +19,17 @@
 			String pw = request.getParameter("password");
 			String email = request.getParameter("email");
 			
+			String add = "add";
+			String modified = "modified";
+			String deleted = "deleted";
+			
 			System.out.println("id = " + id);
 			System.out.println("email = " + email);
 			
 			
 			/* iD 저장을 위한 체인 생성*/
 			IdChain chain = new IdChain();
+			
 			
 			
 			Class.forName("com.mysql.jdbc.Driver");
@@ -77,9 +83,12 @@
 		
 				chain.id = id;
 				chain.email = email;
+				IdChain.data = add;
+				
 				
 				System.out.println("CHAIN id = " + chain.id);
 				System.out.println("CHAIN email = " + chain.email);
+				System.out.println("CHAIN data = " + IdChain.data);
 				
 				
 				chain.addObject(chain.email, chain.id);
