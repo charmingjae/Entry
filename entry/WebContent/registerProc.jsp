@@ -20,8 +20,6 @@
 			String email = request.getParameter("email");
 			
 			String add = "add";
-			String modified = "modified";
-			String deleted = "deleted";
 			
 			System.out.println("id = " + id);
 			System.out.println("email = " + email);

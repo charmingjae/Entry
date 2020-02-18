@@ -1,6 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<%@ page import="simpleChain.IdChain" %>
+<%@ page import="simpleChain.IdChain.*" %>
+<%@ page import="simpleChain.Block" %>
+<%@ page import="simpleChain.Block.*" %>
+<%@ page import="java.util.Arrays" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +16,7 @@
 <body>
 
 <%
+
 	String id = (String)session.getAttribute("id");
 	
 	int result = 0;
@@ -54,8 +61,10 @@
 	
 	session.invalidate();
 	
-	%>
 	
+	
+	
+	%>
 	<script type="text/javascript">
 		alert("회원탈퇴가 완료되었습니다.");
 		location.href="event.jsp";

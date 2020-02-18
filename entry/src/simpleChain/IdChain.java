@@ -1,11 +1,13 @@
 package simpleChain;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import com.google.gson.GsonBuilder;
 import simpleChain.Block;
+
 
 public class IdChain {
 	public static List<Block> blockchain = new ArrayList<Block>();
@@ -110,7 +112,7 @@ public class IdChain {
 			if(blockchain.size() == 0) {
 				// 배열 복사
 				transactions = deepCopy(copytran);
-				
+
 				
 				blockchain.add(new Block(blockchain.size(), data, "0", transactions, mapTrans));
 				transactions = new ArrayList<>();
@@ -143,6 +145,10 @@ public class IdChain {
 		System.out.println(blockchainJson);
 		
 		System.out.println("\n===========================================================================================");
+		System.out.println("copytran : \n");
+		for(int i=0;i<copytran.size();i++) {
+			System.out.println(copytran.get(i));
+		}
 }
 	
 	
@@ -170,7 +176,7 @@ public class IdChain {
 		
 		
 		mapTrans.put("Email", email);
-		mapTrans.put("iD", id);
+		mapTrans.put("id", id);
 
 		copytran.add(mapTrans);
 			

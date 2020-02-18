@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
+<%@ page import="simpleChain.IdChain" %>
+<%@ page import="simpleChain.IdChain.*" %>
+<%@ page import="simpleChain.Block" %>
+<%@ page import="simpleChain.Block.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,6 +58,11 @@
 			
 			result = pstat.executeUpdate();
 			session.invalidate();
+			
+			/* IdChain */
+			IdChain.data = "Password is modified. ID : "+id;
+			
+			
 			%>
 			
 			<script type="text/javascript">
