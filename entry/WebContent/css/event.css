@@ -50,6 +50,15 @@ span {
     top: 80%;
 }
 
+#hash{
+    position: absolute;
+    font-size: 30px;
+    font-family: "Bangers";
+    transform: translateX(-50%);
+    left : 50%;
+    top: 92%;
+}
+
 .middle{
   position: absolute;
   top: 35%;

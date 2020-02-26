@@ -20,15 +20,17 @@ public class Block {
 	private long timeStamp; //as number of milliseconds since 1/1/1970.
 	private int nonce;
 	public List<Object> idList;
+	public List<Object> UserHistory;
 //	public Map<String, String> mapTrans = new HashMap<>();
 	
 	
 //	Block Constructor.
-	public Block(int index, String data, String previousHash, List<Object> transactions, Map<String, String> mapTrans) {
-		idList = new ArrayList<Object>();
+	public Block(int index, String data, String previousHash, List<Object> transactions,List<Object> idList, Map<String, String> mapTrans) {
+		UserHistory = new ArrayList<Object>();
 		this.index = index + 1;
 		this.data = data;
-		this.idList = transactions;
+		this.idList = idList;
+		this.UserHistory = transactions;
 //		this.mapTrans = mapTrans;
 		this.previousHash = previousHash;
 		this.timeStamp = new Date().getTime();
@@ -53,5 +55,7 @@ public class Block {
 			hash = calculateHash();
 		}
 		System.out.println("블록 채굴 완료 [ 해쉬 값 ] : " + hash + "\n");
+		
+		IdChain.hash = hash;
 	}
 }

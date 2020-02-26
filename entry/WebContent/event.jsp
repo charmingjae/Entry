@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="simpleChain.IdChain" %>
+<%@ page import="simpleChain.IdChain.*" %>
+<%@ page import="simpleChain.Block" %>
+<%@ page import="simpleChain.Block.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,6 +84,7 @@
 
 	<!-- Timer -->
     <span id="demo"></span>
+    <span id="hash"> BASED Hash : <%=IdChain.hash.substring(0,20) %></span>
 
     <script>
         // Set the date we're counting down to

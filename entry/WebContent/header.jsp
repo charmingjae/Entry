@@ -26,7 +26,7 @@
 
                         <div class="logo">
                               <!-- LOGO -->
-                              <a class="center__text glitch is-glitching" data-text="ENTRY" href="event.jsp"><span>ENTRY</span></a>
+                              <a href="event.jsp"><span>ENTRY</span></a>
                         </div>
                         
 
@@ -64,8 +64,7 @@
 	                            		}
 	                            		else{
 	                            			if(getSession.equals("admin")){
-                   				%>			<li><a href="press.jsp">!!! PRESS !!!</a></li>
-                   							<li><a href="generateBlock.jsp">BLOCK</a></li>
+                   				%>			<li><strong><a href="adminPg.jsp">4 ADMIN</a></strong></li>
    	                            <%
 	                            			}
 	                            %>			<li><a href="logout.jsp">Log-Out</a></li>

@@ -1,7 +1,6 @@
 package simpleChain;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,6 +11,7 @@ import simpleChain.Block;
 public class IdChain {
 	public static List<Block> blockchain = new ArrayList<Block>();
 
+	public static String hash;
 	
 	public List<Tran> trans = new ArrayList<Tran>(); // Tran class 내에 있는 요소들을 list로 저장.
 
@@ -27,7 +27,9 @@ public class IdChain {
 	public static String data;
 	
 	public static List<Object> transactions = new ArrayList<>(); // 갖고갈 array
+	public static List<Object> transactionsForId = new ArrayList<>(); // 갖고갈 array
 	public static List<Object> copytran = new ArrayList<>(); // 갖고갈 array
+	public static List<Object> copytranForId = new ArrayList<>(); // 갖고갈 array
 	
 	public static Map<String, String> mapTrans; // array에 요소를 넣기 위한 Map.
 
@@ -40,7 +42,7 @@ public class IdChain {
 	
 	
 	/* test1() -> For back-Up */
-	public void test1() { 
+	/*public void test1() { 
 				//add our blocks to the blockchain ArrayList:
 				System.out.println("\n===========================================================================================\n"
 									+"===========================================================================================\n"
@@ -88,7 +90,7 @@ public class IdChain {
 				System.out.println(blockchainJson);
 				
 				System.out.println("\n===========================================================================================");
-	}
+	}*/
 	
 	
 	public void test() { 
@@ -111,11 +113,13 @@ public class IdChain {
 		while(true) {
 			if(blockchain.size() == 0) {
 				// 배열 복사
-				transactions = deepCopy(copytran);
+				transactions = deepCopy(copytran, transactions);
+				transactionsForId = deepCopy(copytranForId, transactionsForId);
 
 				
-				blockchain.add(new Block(blockchain.size(), data, "0", transactions, mapTrans));
+				blockchain.add(new Block(blockchain.size(), data, "0", transactions, transactionsForId, mapTrans));
 				transactions = new ArrayList<>();
+				transactionsForId = new ArrayList<>();
 				System.out.println((blockchain.size())+"번째 블록 마이닝 중 ,,");
 				blockchain.get(blockchain.size()-1).mineBlock(difficulty);
 				index++;
@@ -124,10 +128,12 @@ public class IdChain {
 			else {
 				// 배열 복사
 				
-				transactions = deepCopy(copytran);
+				transactions = deepCopy(copytran, transactions);
+				transactionsForId = deepCopy(copytranForId, transactionsForId);
 				
-				blockchain.add(new Block(blockchain.size(), data, blockchain.get(blockchain.size()-1).hash, transactions, mapTrans));
+				blockchain.add(new Block(blockchain.size(), data, blockchain.get(blockchain.size()-1).hash, transactions, transactionsForId, mapTrans));
 				transactions = new ArrayList<>();
+				transactionsForId = new ArrayList<>();
 				System.out.println((blockchain.size())+"번째 블록 마이닝 중 ,,");
 				blockchain.get(blockchain.size()-1).mineBlock(difficulty);
 				index++;
@@ -152,13 +158,13 @@ public class IdChain {
 }
 	
 	
-	public static List<Object> deepCopy(List<Object> arr){
+	public static List<Object> deepCopy(List<Object> arr1, List<Object> arr2){
 		
-		if(arr == null) return null;
+		if(arr1 == null) return null;
 		
-		transactions.addAll(arr);
+		arr2.addAll(arr1);
 		
-		return transactions;
+		return arr2;
 	}
 	
 	
@@ -186,11 +192,39 @@ public class IdChain {
 		{
 			System.out.println(copytran.get(i));
 		}
-		
-		
 //		test();
 		return copytran;
+	}
+	
+	public List<Object> addId(String id) {
 		
+		
+		System.out.println("BEFORE TRANSACTIONS : \n");
+		for(int i = 0 ; i < copytranForId.size(); i++)
+		{
+			System.out.println(copytranForId.get(i));
+		}
+		System.out.println("\n");
+		
+		copytranForId.add(id);
+			
+		
+		System.out.println("AFTER TRANSACTIONS : \n");
+		for(int i = 0 ; i < copytranForId.size(); i++)
+		{
+			System.out.println(copytranForId.get(i));
+		}
+//		test();
+		return copytranForId;
+	}
+	
+	public static boolean contains(List<Object> arr, String id) {
+		for(int i=0; i<arr.size(); i++) {
+			if((arr.get(i).toString()).equals(id)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public static Boolean isChainValid() {

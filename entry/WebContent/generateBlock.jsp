@@ -23,7 +23,7 @@
 	
 	self.window.alert("생성 완료..");
 
-	location.href="event.jsp";
+	location.href="adminPg.jsp";
 </script>
 <body>
 

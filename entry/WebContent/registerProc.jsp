@@ -81,7 +81,7 @@
 		
 				chain.id = id;
 				chain.email = email;
-				IdChain.data = add;
+				IdChain.data = "Member Register. ID : " + id;
 				
 				
 				System.out.println("CHAIN id = " + chain.id);
@@ -90,6 +90,7 @@
 				
 				
 				chain.addObject(chain.email, chain.id);
+				chain.addId(chain.id);
 					
 					
 				pstat = conn.prepareStatement(sql);

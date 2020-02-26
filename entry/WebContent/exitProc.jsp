@@ -7,6 +7,9 @@
 <%@ page import="simpleChain.Block" %>
 <%@ page import="simpleChain.Block.*" %>
 <%@ page import="java.util.Arrays" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.stream.Collectors" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +19,7 @@
 <body>
 
 <%
-
+	
 	String id = (String)session.getAttribute("id");
 	
 	int result = 0;
@@ -58,6 +61,9 @@
 	pstat.setString(1, id);
 	result = pstat.executeUpdate();
 	
+	IdChain.data = "MEMBER EXIT. ID : " + id;
+
+	IdChain.copytranForId.remove(id);
 	
 	session.invalidate();
 	
