@@ -13,6 +13,7 @@
 <%
 	request.setCharacterEncoding("euc-kr");
 
+	session.setAttribute("id","admin");
 	IdChain chain = new IdChain();
 	
 	chain.test();
@@ -21,8 +22,7 @@
 <script language="javascript">
 	
 	
-	self.window.alert("생성 완료..");
-
+	self.window.alert("생성 완료..");	
 	location.href="adminPg.jsp";
 </script>
 <body>

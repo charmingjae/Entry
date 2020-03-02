@@ -84,7 +84,25 @@
 
 	<!-- Timer -->
     <span id="demo"></span>
-    <span id="hash"> BASED Hash : <%=IdChain.hash.substring(0,20) %></span>
+    
+    
+    <%
+    	String getSession = "";
+    
+    	try{
+    		getSession = (String)session.getAttribute("id");
+    		if(getSession != null || request.isRequestedSessionIdValid()){
+    			%>
+    			
+    				<!-- difficulty가 바뀌게 되면 하단의 substring 숫자 변경할 것 . -->
+    			<span id="hash"> BASED Hash : <%=IdChain.hash.substring(4,24) %></span>
+    			<%
+    			
+    		}
+    	}catch(Exception e){
+    		System.out.println("Exception : "  + e.getMessage());
+    	}
+    %>
 
     <script>
         // Set the date we're counting down to
