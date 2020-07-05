@@ -21,7 +21,8 @@
 <!--             <div class="illustration"><i class="icon ion-ios-paw"></i></div> -->
                   <div class="media">
             <ul>
-                  <li><ion-icon name="flame"></ion-icon><a href="https://www.google.com/search?q=totoro&sxsrf=ACYBGNQkquHC8QRXSNrRdha-64GeR8OMRA:1580824644096&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj9-vPahrjnAhW5yYsBHWAFBp0Q_AUoAXoECBMQAw&biw=1680&bih=915" class="contact">みんな笑ってみな、<br/>おっかないのは逃げちゃうから</a></li>
+                  <!-- <li><ion-icon name="flame"></ion-icon><a href="https://www.google.com/search?q=totoro&sxsrf=ACYBGNQkquHC8QRXSNrRdha-64GeR8OMRA:1580824644096&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj9-vPahrjnAhW5yYsBHWAFBp0Q_AUoAXoECBMQAw&biw=1680&bih=915" class="contact">みんな笑ってみな、<br/>おっかないのは逃げちゃうから</a></li> -->
+                  <li><ion-icon name="flame"></ion-icon><a href="https://www.google.com/search?q=totoro&sxsrf=ACYBGNQkquHC8QRXSNrRdha-64GeR8OMRA:1580824644096&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj9-vPahrjnAhW5yYsBHWAFBp0Q_AUoAXoECBMQAw&biw=1680&bih=915" class="contact">ENTRY<br/>ENTRY</a></li>
             </ul>
             <button type="button" onclick="goal()">time's up</button>
             <script> 

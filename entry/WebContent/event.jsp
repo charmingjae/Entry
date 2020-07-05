@@ -91,12 +91,15 @@
     
     	try{
     		getSession = (String)session.getAttribute("id");
-    		if(getSession != null || request.isRequestedSessionIdValid()){
+    		if(getSession != null || request.isRequestedSessionIdValid() == false){
     			%>
     			
     				<!-- difficulty가 바뀌게 되면 하단의 substring 숫자 변경할 것 . -->
     			<span id="hash"> BASED Hash : <%=IdChain.hash.substring(4,24) %></span>
     			<%
+    			
+    		}
+    		else{
     			
     		}
     	}catch(Exception e){
@@ -106,7 +109,7 @@
 
     <script>
         // Set the date we're counting down to
-        var countDownDate = new Date("Mar 19, 2020 12:00:00").getTime();
+        var countDownDate = new Date("Mar 03, 2021 12:00:00").getTime();
 
         // Update the count down every 1 second
         var x = setInterval(function() {

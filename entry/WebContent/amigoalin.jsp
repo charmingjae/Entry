@@ -28,33 +28,11 @@
         <div class="parallax__layer people3"></div>
         <div class="parallax__layer hero-text">
           <h2><a href="event.jsp">ENTRY</a></h2>
-          
           <ul>
-<!--             <li><a href="#">Passions</a></li>
-            <li><a href="#">Goals</a></li>
-            <li><a href="#" class="btn">Get Started Now</a></li> -->
           </ul>
           <div class="year-container">
-            <%-- <h1><%=userId %></h1> --%>
             <h1>GOAL!</h1>
-            
-            <!--<h1>1</h1>
-            <h1>9</h1> -->
           </div>
-         <!--  <div class="social-container">
-            <a href="https://github.com/KiaanCastillo" target="_blank"
-              ><i class="icon ion-logo-github"></i
-            ></a>
-            <a href="https://www.instagram.com/craftedbykiaan/" target="_blank"
-              ><i class="icon ion-logo-instagram"></i
-            ></a>
-            <a href="https://dribbble.com/kiaancastillo" target="_blank"
-              ><i class="icon ion-logo-dribbble"></i
-            ></a>
-            <a href="https://www.youtube.com/c/KiaanCastillo" target="_blank"
-              ><i class="icon ion-logo-youtube"></i
-            ></a>
-          </div> -->
         </div>
       </div>
       <div class="parallax__group info-container">

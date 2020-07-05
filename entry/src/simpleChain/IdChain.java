@@ -4,8 +4,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import simpleChain.Block;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 
 public class IdChain {
@@ -14,7 +19,7 @@ public class IdChain {
 	public static String hash;
 	
 	public List<Tran> trans = new ArrayList<Tran>(); // Tran class 내에 있는 요소들을 list로 저장.
-
+ 
 	public static int difficulty = 3;
 	
 	/* id를 받아오는 변수 */
@@ -145,9 +150,17 @@ public class IdChain {
 		
 		String blockchainJson = new GsonBuilder().setPrettyPrinting().create().toJson(blockchain);
 		
+//		JSONObject jsonObject = new JSONObject();
+//		Gson gson = new Gson();
+//		jsonObject.put("idchain", gson.toJson(blockchain));
+//		
+//		String blockchainJson = jsonObject.toJSONString();
+		
 		System.out.println("\n===========================================================================================");
 		
 		System.out.println("\n THE iD CHAIN : ");
+//		System.out.println(blockchainJson);
+//		System.out.println(blockchainJson.replaceAll("\\\\", "").replace("{","{\n").replace("}","\n}").replace("[{","[\n{\n").replace("}]","\n}\n]").replace(",", ", \n"));
 		System.out.println(blockchainJson);
 		
 		System.out.println("\n===========================================================================================");
